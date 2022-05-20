@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MVT_Familia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/jorge/OneDrive/Coderhouse/Python/Django/entregable_01/MVT_Familia/MVT_Familia/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
