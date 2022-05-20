@@ -8,5 +8,8 @@ class Familiar(models.Model):
     fec_nacimiento = models.DateField(null=True)
     numero = models.IntegerField()
 
+    def getNombreCompleto(self):
+        return f"{self.nombre} {self.a_paterno} {self.a_materno}"
+
     def __str__(self):
         return f"{self.nombre} {self.a_paterno} {self.a_materno}"

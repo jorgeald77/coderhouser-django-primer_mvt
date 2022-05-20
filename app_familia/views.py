@@ -1,11 +1,18 @@
 from django.http import HttpResponse
+from django.template import loader
+
 from app_familia.models import Familiar
 
 
 # Vista Index
 def index(request):
-    familiares = Familiar.objects.all()
-    return HttpResponse(familiares)
+    template = loader.get_template('app.html')
+    context_dict = {
+        'familiares': Familiar.objects.all()
+    }
+    render = template.render(context_dict)
+
+    return HttpResponse(render)
 
 
 def create(request, familiar_id):
