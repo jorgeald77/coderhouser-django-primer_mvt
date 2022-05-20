@@ -6,30 +6,20 @@ from app_familia.models import Familiar
 
 # Vista Index
 def index(request):
-    template = loader.get_template('app.html')
+    template = loader.get_template('app_familia/index.html')
     context_dict = {
         'familiares': Familiar.objects.all()
     }
-    render = template.render(context_dict)
-
-    return HttpResponse(render)
+    return HttpResponse(template.render(context_dict))
 
 
-def create(request, familiar_id):
+def show(request, id: int):
+    return HttpResponse(id)
+
+
+def create(request):
     return HttpResponse("Formulario para agregar un Familiar")
 
 
 def store(request):
-    pass
-
-
-def edit(request, familiar_id):
-    pass
-
-
-def update(request):
-    pass
-
-
-def delete(request, familiar_id):
     pass
