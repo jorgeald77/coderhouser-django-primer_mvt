@@ -1,5 +1,6 @@
-**/__pycache__/
-MVT_Familia/__pycache__
+*.pyc
+**/__pycache__
+
 
 .DS_Store
 .idea
