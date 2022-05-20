@@ -7,17 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Django MVT | Entregable 01</title>
 </head>
-<style></style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .card {
+        width: 150px;
+        box-shadow: 1px 1px 5px #869AA6;
+        border-radius: 10px;
+        padding: 1.5em;
+    }
+
+    .card_nombre {
+        color: red;
+        font-size:medium;
+        text-align: right;
+    }
+
+    .card_fecha {
+        color: green;
+        font-size:x-small;
+        text-align: right;
+    }
+
+
+
+</style>
 <body>
 <h2>Familiares</h2>
-<ul>
-    {% for familiar in familiares %}
-    <li>
-        {{ familiar.getNombreCompleto }}
-        {{ familiar.fec_nacimiento }}
-        {{ familiar.fec_numero }}
-    </li>
-    {% endfor %}
-</ul>
+
+
+<section>
+    <div class="wrapper">
+        {% for familiar in familiares %}
+        <div class="card">
+            <div>
+                <p class="card_nombre">{{ familiar.getNombreCompleto }}</p>
+                <p class="card_fecha">{{ familiar.fec_nacimiento }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
 </body>
 </html>
