@@ -6,6 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>App Familia</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .card {
+        width: 150px;
+        box-shadow: 1px 1px 5px #869AA6;
+        border-radius: 10px;
+        padding: 1.5em;
+    }
+
+    .card_nombre {
+        color: red;
+        font-size:medium;
+        text-align: right;
+    }
+
+    .card_fecha {
+        color: green;
+        font-size:x-small;
+        text-align: right;
+    }
+</style>
 </head>
 <body>
 
@@ -16,7 +47,7 @@
     </ul>
 </nav>
 
-{% block %}
+{% block content %}
 {% endblock %}
 
 <footer>

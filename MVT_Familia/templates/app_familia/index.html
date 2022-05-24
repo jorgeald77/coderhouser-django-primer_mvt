@@ -1,49 +1,9 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Django MVT | Entregable 01</title>
-</head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+{% extends 'app.html' %}
 
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
+{% load static %}
 
-    .card {
-        width: 150px;
-        box-shadow: 1px 1px 5px #869AA6;
-        border-radius: 10px;
-        padding: 1.5em;
-    }
-
-    .card_nombre {
-        color: red;
-        font-size:medium;
-        text-align: right;
-    }
-
-    .card_fecha {
-        color: green;
-        font-size:x-small;
-        text-align: right;
-    }
-
-
-
-</style>
-<body>
+{% block content %}
 <h2>Familiares</h2>
-
 
 <section>
     <div class="wrapper">
@@ -57,6 +17,4 @@
         {% endfor %}
     </div>
 </section>
-
-</body>
-</html>
+{% endblock %}
