@@ -12,6 +12,8 @@
             <div>
                 <p class="card_nombre">{{ familiar.getNombreCompleto }}</p>
                 <p class="card_fecha">{{ familiar.fec_nacimiento }}</p>
+                <hr>
+                <button><a href="{% url 'show' id=familiar.id %}">Ver más...</a></button>
             </div>
         </div>
         {% endfor %}
